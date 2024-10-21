@@ -37,7 +37,7 @@ const Timeline = () => {
         <div className="relative">
           {/* Timeline line (hidden on mobile) */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full opacity-50" 
-              style={{ backgroundImage: 'linear-gradient(to bottom, #4ade80 50%, rgba(255,255,255,0) 50%)', backgroundPosition: 'right', backgroundSize: '2px 12px', backgroundRepeat: 'repeat-y' }}>
+              style={{ backgroundImage: 'linear-gradient(to bottom, #DEE9F4 50%, rgba(255,255,255,0) 50%)', backgroundPosition: 'right', backgroundSize: '2px 12px', backgroundRepeat: 'repeat-y' }}>
           </div>
           {steps.map((step, index) => (
             <div key={index} className={`mb-16 md:flex md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
@@ -53,7 +53,7 @@ const Timeline = () => {
                 </div>
               </div>
               
-              <div className={`hidden md:flex w-8 h-8 ${index % 2 === 0 ? 'md:mr-8':'md:ml-4'} bg-green-400 rounded-full items-center justify-center text-white font-bold z-10`}>
+              <div className={`hidden md:flex w-8 h-8 ${index % 2 === 0 ? 'md:mr-8':'md:ml-4'} bg-[#DEE9F4] rounded-full items-center justify-center text-[#0347A3] font-bold z-10`}>
                 {index + 1}
               </div>
               

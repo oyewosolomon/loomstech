@@ -26,7 +26,7 @@ const Aboutus = () => {
       <div className='max-w-6xl mx-auto px-8'>
         <div className='mb-16'>
           <div className='text-[#193E2F] font-semibold mb-4'>WHAT WE DO</div>
-          <h2 className='font-recoleta text-5xl font-semibold leading-snug mb-8 max-w-2xl'>
+          <h2 className='font-recoleta text-[#02357A] text-5xl font-semibold leading-snug mb-8 max-w-2xl'>
             All in one service for your business.
           </h2>
         </div>
@@ -47,19 +47,19 @@ const Aboutus = () => {
             <div className='lg:w-2/3 lg:pr-12 mb-12 lg:mb-0'>
               {/* Cloud Consulting Service */}
               <div className='border-l-4 border-black pl-6 mb-10'>
-                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#193E2F]'>
+                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#262A2F]'>
                   Cloud Consulting Service
                 </h3>
                 <p className='text-gray-600 mb-4'>
                   Reduce costs, accurate deployments, and scale effortlessly with our expert cloud consulting services.
                 </p>
-                <a href="#" className='font-semibold text-green-600 flex items-center'>
+                <a href="#" className='font-semibold text-[#046BF5] flex items-center'>
                   Learn More <ArrowRight className="ml-2" />
                 </a>
               </div>
               {/* Build Custom Solutions */}
               <div className='pl-6 mb-10'>
-                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#193E2F]'>Build Custom Solutions</h3>
+                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#262A2F]'>Build Custom Solutions</h3>
                 <p className='text-gray-600'>
                   We craft tailored solutions to meet business needs. Our expertise extends to modernizing legacy systems and facilitating smooth technology transitions.
                 </p>
@@ -72,7 +72,7 @@ const Aboutus = () => {
               </div>
               {/* Data & Analytics */}
               <div className='pl-6'>
-                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#193E2F]'>Data & Analytics</h3>
+                <h3 className='font-recoleta text-xl font-semibold mb-2 text-[#262A2F]'>Data & Analytics</h3>
                 <p className='text-gray-600'>
                   Unlock insights and drive decisions with our advanced data solutions. We help you collect, process, and visualize data to fuel innovation and growth.
                 </p>
@@ -95,13 +95,13 @@ const Aboutus = () => {
               <div className='font-lota font-semibold text-sm  text-[#193E2F]'>
                 Loomstech
               </div>
-              <div className='font-recoleta text-5xl font-semibold my-7'>
+              <div className='font-recoleta text-[#02357A] text-5xl font-semibold my-7'>
                 Business Excellence Reimagined
               </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-between gap-3">
               {sections.map((item, index) => (
-                <div key={index} className="flex-1 rounded-lg bg-[#D1EE7C] py-5 pl-5 pr-20 flex flex-col relative">
+                <div key={index} className="flex-1 rounded-lg bg-[#DEE9F4] py-5 pl-5 pr-20 flex flex-col relative">
                    <div className="absolute top-2 right-2 w-20 h-20">
                     <Image
                       src={item.imageUrl}

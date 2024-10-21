@@ -19,7 +19,7 @@ const Contactus = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
-            <h2 className="font-recoleta text-3xl font-semibold"> Our Diverse Portfolios</h2>
+            <h2 className="font-recoleta text-[#02357A] text-3xl font-semibold"> Our Diverse Portfolios</h2>
             <p className="flex-grow">
               We deliver tailored solutions with a focus on seamless integration,ease of use and scalability
             </p>
@@ -38,7 +38,7 @@ const Contactus = () => {
             <div className="">
                
             </div>
-            <h2 className="font-recoleta text-3xl font-semibold"> Shoot us an Email</h2>
+            <h2 className="font-recoleta text-[#02357A] text-3xl font-semibold"> Shoot us an Email</h2>
             <p className="flex-grow">
             We deliver tailored solutions with a focus on seamless integration,ease of use and scalability
             </p>
@@ -50,11 +50,11 @@ const Contactus = () => {
 
         <div className='flex flex-col lg:flex-row justify-between gap-4 py-16'>
           <div className='flex flex-col w-1/2 gap-3'>
-            <div className='font-recoleta font-semibold text-3xl'>
+            <div className='font-recoleta text-[#02357A] font-semibold text-3xl'>
             Upgrade your business today with Loomstech
             </div>
             <div>
-                <button className="bg-green-700 text-xs text-white px-3 py-2 rounded-xl hidden lg:flex ">
+                <button className="bg-[#046BF5] text-xs text-white px-3 py-2 rounded-xl hidden lg:flex ">
                 Reach Out To Us
                 <ArrowRight className="ml-2 size-4" />
                 </button>
@@ -62,11 +62,11 @@ const Contactus = () => {
           </div>
           <div className=' w-1/2 lg:text-right'>
             <div className='flex flex-col align-middle gap-2'>
-              <a href="" className='text-[#21272A]'>Home</a>
-              <a href="">About us</a>
-              <a href="">Contact us</a>
+              <a href="" className='text-[#0347A3]'>Home</a>
+              <a href="" className='hover-[#0347A3]'>About us</a>
+              <a href="" className='hover-[#0347A3]'>Contact us</a>
             </div>
-            <button className="bg-green-700 text-xs text-white px-3 py-2 rounded-xl flex lg:hidden lg:items-center lg:mx-auto md:mx-0">
+            <button className="bg-[#046BF5] text-xs text-white px-3 py-2 rounded-xl flex lg:hidden lg:items-center lg:mx-auto md:mx-0">
                 Reach Out To Us
                 <ArrowRight className="ml-2 size-4" />
                 </button>
