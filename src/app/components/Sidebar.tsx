@@ -20,10 +20,7 @@ const Sidebar = ({ isActive, setIsActive }:SidebarProps) => {
     setIsActive(false);
   };
 
-  const toggleAbout = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setAboutExpanded(!aboutExpanded);
-  };
+
 
   return (
     <motion.div
