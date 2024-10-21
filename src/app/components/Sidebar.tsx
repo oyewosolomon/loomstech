@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { IoIosArrowDown } from "react-icons/io";
 import { motion } from 'framer-motion';
-import { MdOutlineLightMode } from "react-icons/md";
-import { IoIosMoon } from "react-icons/io";
 
 
 interface SidebarProps {

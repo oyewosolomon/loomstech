@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const Contactus = () => {
   return (
