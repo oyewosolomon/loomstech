@@ -9,7 +9,7 @@ interface SidebarProps {
   }
 
 const Sidebar = ({ isActive, setIsActive }:SidebarProps) => {
-  const [aboutExpanded, setAboutExpanded] = useState(false);
+
 
   const sidebarVariants = {
     open: { opacity: 1, x: 0 },
