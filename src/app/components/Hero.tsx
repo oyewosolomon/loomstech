@@ -14,7 +14,7 @@ const Hero = () => {
     <header className=" flex justify-between items-center md:bg-white md:mt-9 md:mx-[3rem] p-5 rounded-3xl">
         <div className="flex items-center">
             <span className="text-green-700 text-2xl font-bold">
-            <Image src="/assets/Logo.png" width={150} height={50} alt="Logo" />            
+            <Image src="/assets/logo.png" width={150} height={50} alt="Logo" />            
             </span>
         </div>
        
