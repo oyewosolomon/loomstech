@@ -116,7 +116,11 @@ const CloudWhy: React.FC = () => {
   }
 
   const getButtonClass = (buttonId: ButtonType): string => {
-    return `flex gap-3 lg:hover:bg-white lg:hover:text-black lg:hover:p-4 lg:hover:rounded-lg lg:hover:pr-12 transition-all duration-300 ${activeButton === buttonId ? 'lg:bg-white lg:text-black lg:p-4 lg:rounded-lg lg:pr-12' : ''}`
+    return `flex items-center gap-3 lg:hover:bg-white lg:hover:text-black lg:hover:p-4 lg:hover:rounded-lg lg:hover:pr-12 transition-all duration-300 ${
+      activeButton === buttonId 
+        ? 'lg:bg-white lg:text-black lg:p-4 lg:rounded-lg lg:pr-12' 
+        : ''
+    } justify-center lg:justify-start w-full`
   }
 
   const renderButtonImage = (buttonType: ButtonType) => {
