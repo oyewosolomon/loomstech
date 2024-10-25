@@ -20,7 +20,7 @@ interface TimelineItemProps {
 const Timeline: React.FC = () => {
   const steps: Step[] = [
     {
-      title: "Asses",
+      title: "Assess",
       description: "Our process starts with assessing your organization's needs and identifying the business case",
       image: "/assets/image 7.png"
     },
