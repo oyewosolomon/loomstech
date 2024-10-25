@@ -93,7 +93,7 @@ const CloudHero = () => {
           </div>
           
           <div className="w-full md:w-1/2 flex justify-center items-center">
-            <div className="relative w-3/4 h-full aspect-square md:aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative w-full md:w-3/4 h-full aspect-square md:aspect-[4/3] rounded-lg overflow-hidden">
               <Image 
                 src="/assets/image 3.png"
                 alt="Cloud Development Solutions"

@@ -30,15 +30,17 @@ const CloudDevelopment = () => {
                         The Software House&apos;s cloud native development team offers just that.
                     </p>
                 </div>
-                <div className='flex justify-end relative h-[400px] w-full'>  {/* Container needs relative position and dimensions */}
-                    <Image 
-                        src="/assets/cloud-img.png"
-                        alt="Code editor screenshot" 
-                        fill
-                        className="rounded-lg shadow-lg object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"  // Helps Next.js optimize the image size
-                        priority
-                    />
+                <div className='relative h-[400px] w-full '>  {/* Added px-5 with md:px-0 */}
+                    <div className='relative h-full mx-5 md:mx-0'> 
+                        <Image 
+                            src="/assets/cloud-img.png"
+                            alt="Code editor screenshot" 
+                            fill
+                            className="rounded-lg shadow-lg"
+                            sizes="(max-width: 768px) 100vw, 50vw"  // Helps Next.js optimize the image size
+                            priority
+                        />
+                    </div>
                 </div>
             </div>
 
