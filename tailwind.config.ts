@@ -17,6 +17,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: "var(--primary)",
         secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
       },
       backgroundImage: {
         'process-bg': "url('/assets/process-bg.png')",

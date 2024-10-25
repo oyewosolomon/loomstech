@@ -56,20 +56,23 @@ const Testimonial = () => {
   };
 
   return (
-    <div id='testimonial' className='bg-[#046BF5] text-white py-12'>
-      <div className='max-w-6xl mx-auto px-4'>
-        <div className='flex flex-col lg:flex-row gap-8'>
-          <div className='w-full lg:w-1/2 space-y-6 md:pr-3'>
-            <div>
-              <Image src="/assets/Stars.png" width={100} height={20} alt='Testimonials' />
+    <div id='testimonial' className='bg-[#046BF5] text-white py-12 overflow-x-hidden'>
+      <div className='max-w-6xl mx-auto px-4 overflow-x-hidden'>
+        <div className='flex flex-col lg:flex-row gap-12'>
+          <div className='w-full lg:w-1/2 flex flex-col justify-between space-y-6 md:pr-3 h-full'>
+            {/* Top content */}
+            <div className='space-y-6'>
+              <div>
+                <Image src="/assets/Stars.png" width={100} height={20} alt='Testimonials' />
+              </div>
+              <div className='text-2xl sm:text-3xl mb-8 lg:text-4xl transition-opacity duration-500 pr-0 md:pr-14'>
+                {testimonials[currentIndex].text}
+              </div>
             </div>
-            <div 
-              className='text-2xl sm:text-3xl mb-8 lg:text-4xl transition-opacity duration-500 pr-0 md:pr-14'
-              key={currentIndex}
-            >
-              {testimonials[currentIndex].text}
-            </div>
-            <div className='flex flex-col sm:flex-row justify-between md:items-center gap-4 '>
+
+            {/* Bottom content - will be pushed to bottom */}
+            <div className='flex flex-col sm:flex-row justify-between md:items-center gap-4 mt-auto'>
+              {/* Rest of your content remains the same */}
               <div className='flex items-center gap-4'>
                 <Image 
                   src={testimonials[currentIndex].avatar} 
@@ -102,16 +105,16 @@ const Testimonial = () => {
             </div>
           </div>
           <div className='hidden lg:block lg:w-1/2 h-64 sm:h-80 lg:h-[400px]'>
-          <div className='w-full h-full relative'>
-            <Image 
-              src={testimonials[currentIndex].image}
-              layout="fill"
-              objectFit="cover"
-              alt="Testimonials"
-              className='rounded-lg transition-opacity duration-500'
-            />
+            <div className='w-full h-full relative'>
+              <Image 
+                src={testimonials[currentIndex].image}
+                layout="fill"
+                objectFit="cover"
+                alt="Testimonials"
+                className='rounded-lg transition-opacity duration-500'
+              />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

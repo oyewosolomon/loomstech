@@ -85,7 +85,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <ModalButton className="bg-[#046BF5] text-white px-6 py-3 rounded-md flex items-center mx-auto md:mx-0">
+                <ModalButton className="bg-[#046BF5] text-white px-6 py-3 rounded-xl flex items-center mx-auto md:mx-0">
                   Connect with us
                   <ArrowRight className="ml-2" />
                 </ModalButton>
