@@ -7,7 +7,7 @@ import Nav from '../Nav';
 import ModalButton from '../ModalButton';
 
 const Hero = () => {
-  // Animation variants for the content
+
   const contentVariants = {
     hidden: {
       opacity: 0,
@@ -23,7 +23,6 @@ const Hero = () => {
     }
   };
 
-  // Animation variants for the SVG container
   const svgContainerVariants = {
     hidden: {
       opacity: 0,
@@ -39,7 +38,6 @@ const Hero = () => {
     }
   };
 
-  // Overlay path animation
   const pathVariants = {
     hidden: {
       opacity: 0
@@ -94,18 +92,16 @@ const Hero = () => {
           </motion.div>
 
           <motion.div 
-            className="w-full md:w-1/2 h-[450px] md:h-screen relative"
+            className="w-full md:w-1/2 h-[450px] md:h-screen relative -bottom-8 md:bottom-0"
             initial="hidden"
             animate="visible"
             variants={svgContainerVariants}
           >
-            {/* Base SVG image */}
             <div 
               className="w-full h-full bg-no-repeat bg-contain bg-center"
               style={{ backgroundImage: 'url(/assets/g8.svg)' }}
             />
             
-            {/* Animated overlay */}
             <motion.div
               className="absolute inset-0 z-10"
               initial="hidden"
