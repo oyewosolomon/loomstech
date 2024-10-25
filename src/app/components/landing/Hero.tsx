@@ -92,7 +92,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.div 
-            className="w-full md:w-1/2 h-[450px] md:h-screen relative -bottom-8 md:bottom-0"
+            className="w-full md:w-1/2 h-[450px] md:h-screen relative -bottom-4 md:bottom-0"
             initial="hidden"
             animate="visible"
             variants={svgContainerVariants}

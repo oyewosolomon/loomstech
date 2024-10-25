@@ -194,7 +194,7 @@ const Aboutus = () => {
     <div id='aboutus' className='bg-white dark:text-white min-h-screen py-16 overflow-x-hidden'>
       <div className='max-w-6xl mx-auto px-0 md:px-5'>
         <div className='mb-8 text-center md:text-left'>
-          <div className='text-black font-semibold mb-4'>WHAT WE DO</div>
+          <div className='text-black font-semibold mb-4'> WHAT WE DO </div>
           <h2 className='font-recoleta text-[#02357A] text-4xl md:text-5xl font-semibold leading-snug mb-3 md:mb-8 max-w-2xl'>
             All in one service for your business.
           </h2>
