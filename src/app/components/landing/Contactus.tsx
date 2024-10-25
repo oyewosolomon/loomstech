@@ -21,10 +21,10 @@ const Contactus = () => {
                 />
             </div>
             <h2 className="font-recoleta text-[#02357A] text-3xl font-semibold"> Our Diverse Portfolios</h2>
-            <p className="flex-grow">
+            <p className="flex-grow text-gray-800">
               We deliver tailored solutions with a focus on seamless integration,ease of use and scalability
             </p>
-            <a href='#' className='flex font-semibold text-sm place-items-center'>
+            <a href='#' className='flex font-semibold text-gray-800 text-sm place-items-center'>
             Learn More <ArrowRight className='size-4 pl-2'/>
             </a>
           </div>
@@ -40,10 +40,10 @@ const Contactus = () => {
                
             </div>
             <h2 className="font-recoleta text-[#02357A] text-3xl font-semibold"> Shoot us an Email</h2>
-            <p className="flex-grow">
+            <p className="flex-grow text-gray-800">
             We deliver tailored solutions with a focus on seamless integration,ease of use and scalability
             </p>
-            <ModalButton className='flex font-semibold text-sm place-items-center'>
+            <ModalButton className='flex font-semibold text-gray-800 text-sm place-items-center'>
             Connect with us <ArrowRight className='size-4 pl-2'/>
             </ModalButton>
            
