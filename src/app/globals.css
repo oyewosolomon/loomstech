@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #046BF5;
+  --secondary: #02357A;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,16 +34,16 @@
 
 @font-face {
   font-family: 'Lota Grotesque';
-  src: url('/fonts/lota/Los Andes  Lota Grotesque Alt 1 Regular.woff2') format('woff2'),
-       url('/fonts/lota/Los Andes  Lota Grotesque Alt 1 Regular.woff') format('woff');
+  src: url('/fonts/lota/Los Andes  Lota Grotesque Alt 1 Regular.otf') format('otf'),
+       url('/fonts/lota/Los Andes  Lota Grotesque Alt 1 Regular.otf') format('otf');
        font-weight: 400;
        font-style: normal;
 }
 
 @font-face {
   font-family: 'Lota Grotesque';
-  src: url('/fonts/lota/Los Andes  Lota Grotesque Alt 2 Bold.woff2') format('woff2'),
-       url('/fonts/lota/Los Andes  Lota Grotesque Alt 2 Bold.woff') format('woff');
+  src: url('/fonts/lota/Los Andes  Lota Grotesque Alt 2 Bold.otf') format('otf'),
+       url('/fonts/lota/Los Andes  Lota Grotesque Alt 2 Bold.otf') format('otf');
        font-weight: 600;
        font-style: normal;
 }
