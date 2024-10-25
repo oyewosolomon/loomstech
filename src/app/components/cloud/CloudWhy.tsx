@@ -43,7 +43,7 @@ const CloudWhy = () => {
                 </h1> 
                 
                 <motion.div variants={fadeInUp}>  
-                    Your DevOps and other cloud developers can learn by experimenting with cloud environment if there's time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
+                    Your DevOps and other cloud developers can learn by experimenting with cloud environment if there&apos;s time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
                 </motion.div>
             </motion.div>
 
@@ -89,7 +89,7 @@ const CloudWhy = () => {
                             Why build for the cloud?
                         </h2>
                         <motion.div variants={fadeInUp} className='my-3'>
-                            Your DevOps and other cloud developers can learn by experimenting with cloud environment if there's time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
+                            Your DevOps and other cloud developers can learn by experimenting with cloud environment if there&apos;s time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
                         </motion.div>
 
                         <motion.div 

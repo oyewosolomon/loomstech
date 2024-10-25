@@ -3,7 +3,6 @@
 import React from 'react';
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
 import ModalButton from '../ModalButton';
 import { ArrowRight } from 'lucide-react';
 
@@ -80,7 +79,7 @@ const CloudProcess: FC<AWSLandingPageProps> = ({
       >
         <div className='w-full md:w-[74%]'>
           <p className='mb-3'>
-            <span className='font-recoleta font-semibold text-xl text-secondary'>What's your no. 1 issue with AWS?</span> 
+            <span className='font-recoleta font-semibold text-xl text-secondary'>What&apos;s your no. 1 issue with AWS?</span> 
             <span className='text-primary'>Cost?</span>
           </p>
           <p className='text-primary mb-2'>Predictability? Delivery time?</p>

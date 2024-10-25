@@ -32,16 +32,16 @@ const Testimonial = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide functionality
+  
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Change slide every 5 seconds
+    }, 5000); 
 
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => 

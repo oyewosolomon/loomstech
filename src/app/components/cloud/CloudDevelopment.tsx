@@ -1,4 +1,3 @@
-import { Code, DollarSign, Rocket, Scale, Shield, Zap } from 'lucide-react'
 import React from 'react'
 import Image from 'next/image'
 
