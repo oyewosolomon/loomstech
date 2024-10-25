@@ -5,7 +5,7 @@ import ModalButton from '../ModalButton'
 
 const Contactus = () => {
   return (
-    <div id='contactus' className='bg-white dark:bg-black dark:text-white py-12'>
+    <div id='contactus' className='bg-white py-12'>
       <div className='max-w-6xl mx-auto px-4'>
         <div className='flex flex-col lg:flex-row gap-4'>
          
