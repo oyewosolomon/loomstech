@@ -135,11 +135,11 @@ const Timeline: React.FC = () => {
 
   return (
     <div className="container mx-auto py-8 bg-white">
-      <div className='font-lota font-semibold text-center text-sm text-[#193E2F]'>
+      <div className='font-lota font-semibold text-center text-sm mb-3 text-[#193E2F]'>
         HOW WE WORK
       </div>              
              
-      <h1 className="font-recoleta text-5xl font-semibold text-center text-secondary mb-12">Our process</h1>
+      <h1 className="font-recoleta text-5xl font-semibold text-center text-secondary mb-14">Our process</h1>
     
       <div className='max-w-6xl mx-auto px-4 md:px-8'>
         <div className="relative">
