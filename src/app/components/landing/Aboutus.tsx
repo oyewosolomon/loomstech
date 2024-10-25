@@ -28,29 +28,6 @@ const serviceImages = [
   "/assets/data-analytics.png"
 ];
 
-const services = [
-  {
-    title: "Cloud Consulting Service",
-    content: "Reduce costs, accurate deployments, and scale effortlessly with our expert cloud consulting services.",
-    link: "/cloud",
-    image: serviceImages[0]
-  },
-  {
-    title: "Build Custom Solutions",
-    content: "We craft tailored solutions to meet business needs. Our expertise extends to modernizing legacy systems and facilitating smooth technology transitions.",
-    image: serviceImages[1]
-  },
-  {
-    title: "Web developments",
-    content: "Build or upgrade a digital product that should have A-grade performance and scale quickly.",
-    image: serviceImages[2]
-  },
-  {
-    title: "Data & Analytics",
-    content: "Unlock insights and drive decisions with our advanced data solutions. We help you collect, process, and visualize data to fuel innovation and growth.",
-    image: serviceImages[3]
-  }
-];
 
 const Aboutus = () => {
   const sections = [
@@ -156,7 +133,31 @@ const Aboutus = () => {
     };
   }, [isMobile]);
 
-  const MobileServiceCard = ({ service}: { service: Service }) => (
+  const services: Service[] = [
+    {
+      title: "Cloud Consulting Service",
+      content: "Reduce costs, accurate deployments, and scale effortlessly with our expert cloud consulting services.",
+      link: "/cloud",
+      image: serviceImages[0]
+    },
+    {
+      title: "Build Custom Solutions",
+      content: "We craft tailored solutions to meet business needs. Our expertise extends to modernizing legacy systems and facilitating smooth technology transitions.",
+      image: serviceImages[1]
+    },
+    {
+      title: "Web developments",
+      content: "Build or upgrade a digital product that should have A-grade performance and scale quickly.",
+      image: serviceImages[2]
+    },
+    {
+      title: "Data & Analytics",
+      content: "Unlock insights and drive decisions with our advanced data solutions. We help you collect, process, and visualize data to fuel innovation and growth.",
+      image: serviceImages[3]
+    }
+  ];
+  
+  const MobileServiceCard = ({ service }: { service: Service }) => (
     <div className="mb-12">
       <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
         <Image
@@ -167,7 +168,7 @@ const Aboutus = () => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="">
+      <div className="pl-0">
         <h3 className="font-recoleta text-xl font-semibold mb-2 text-[#262A2F]">
           {service.title}
         </h3>
@@ -188,7 +189,7 @@ const Aboutus = () => {
       </div>
     </div>
   );
-
+  
   return (
     <div id='aboutus' className='bg-white dark:text-white min-h-screen py-16 overflow-x-hidden'>
       <div className='max-w-6xl mx-auto px-0 md:px-5'>
@@ -219,7 +220,7 @@ const Aboutus = () => {
               // Mobile Layout
               <div className="px-5">
                 {services.map((service, index) => (
-                  <MobileServiceCard key={index} service={service} index={index} />
+                  <MobileServiceCard key={index} service={service} />
                 ))}
               </div>
             ) : (
