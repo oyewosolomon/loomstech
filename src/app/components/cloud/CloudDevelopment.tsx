@@ -22,13 +22,13 @@ const CloudDevelopment = () => {
                         Using cloud based development resources to build and scale your app requires a rare skill set and an even more rare mentality.
                     </p>
                     <p className="text-gray-600 mb-6">
-                        You need the sharpest knowledge from the worlds of cloud software development and infrastructure. That's a lot to handle.
+                        You need the sharpest knowledge from the worlds of cloud software development and infrastructure. That&apos;s a lot to handle.
                     </p>
                     <p className="text-gray-600">
-                        Your DevOps and other cloud developers can learn by experimenting with cloud environment if there's time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
+                        Your DevOps and other cloud developers can learn by experimenting with cloud environment if there&apos;s time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
                     </p>
                     <p className="text-gray-600 mt-6">
-                        The Software House's cloud native development team offers just that.
+                        The Software House&apos;s cloud native development team offers just that.
                     </p>
                 </div>
                 <div className='flex justify-end relative h-[400px] w-full'>  {/* Container needs relative position and dimensions */}
@@ -108,7 +108,7 @@ const CloudDevelopment = () => {
                 </div>
                 <h3 className="text-xl font-recoleta font-semibold text-secondary mb-4">Outstanding Security</h3>
                 <p className="text-gray-600">
-                    The cloud offers first-class security services, so you won't have to build from scratch
+                    The cloud offers first-class security services, so you won&apos;t have to build from scratch
                 </p>
                 </div>
             </div>

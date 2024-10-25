@@ -1,14 +1,11 @@
 "use client"
 
-import { ArrowLeft, ArrowRight } from 'lucide-react'
 import React from 'react'
-import ModalButton from '../ModalButton'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
 
 const CloudWhy = () => {
-  const containerRef = React.useRef(null)
+//   const containerRef = React.useRef(null)
 
   // Animation variants
   const fadeInUp = {
