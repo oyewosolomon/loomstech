@@ -13,6 +13,14 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+interface Service {
+  title: string;
+  content: string;
+  link?: string;
+  image: string;
+}
+
+
 const serviceImages = [
   "/assets/cloud-service.png", 
   "/assets/custom-solutions.png",
@@ -148,7 +156,7 @@ const Aboutus = () => {
     };
   }, [isMobile]);
 
-  const MobileServiceCard = ({ service, index }: { service: any; index: number }) => (
+  const MobileServiceCard = ({ service}: { service: Service }) => (
     <div className="mb-12">
       <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
         <Image
