@@ -195,11 +195,11 @@ const Aboutus = () => {
       <div className='max-w-6xl mx-auto px-0 md:px-5'>
         <div className='mb-8 text-center md:text-left'>
           <div className='text-black font-semibold mb-4'>WHAT WE DO</div>
-          <h2 className='font-recoleta text-[#02357A] text-4xl md:text-5xl font-semibold leading-snug mb-8 max-w-2xl'>
+          <h2 className='font-recoleta text-[#02357A] text-4xl md:text-5xl font-semibold leading-snug mb-3 md:mb-8 max-w-2xl'>
             All in one service for your business.
           </h2>
 
-          <div className='block md:hidden'>
+          <div className='block md:hidden px-5'>
             At loomstech, we go beyond conventional consulting. We are your trusted partner in designing and crafting powerful software solutions for seamless business growth.
             <ModalButton className="bg-[#046BF5] mt-5 text-white px-6 py-3 rounded-xl flex items-center mx-auto md:mx-0">
               Connect with us

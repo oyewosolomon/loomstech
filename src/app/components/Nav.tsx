@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import Sidebar from './landing/Sidebar';
 import { AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 const Nav = () => {
 
@@ -11,9 +12,9 @@ const Nav = () => {
         <div>
             <header className=" flex justify-between items-center md:bg-white md:mt-9 md:mx-[3rem] p-5 rounded-3xl">
             <div className="flex items-center">
-                <span className="text-green-700 text-2xl font-bold">
+                <Link href="/" className="text-green-700 text-2xl font-bold">
                 <Image src="/assets/logo.png" width={150} height={50} alt="Logo" />            
-                </span>
+                </Link>
             </div>
         
             <nav className='hidden md:block'>
