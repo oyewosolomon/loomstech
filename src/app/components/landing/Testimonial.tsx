@@ -56,7 +56,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div id='testimonial' className='bg-[#046BF5] text-white dark:bg-black dark:text-white py-12'>
+    <div id='testimonial' className='bg-[#046BF5] text-white py-12'>
       <div className='max-w-6xl mx-auto px-4'>
         <div className='flex flex-col lg:flex-row gap-8'>
           <div className='w-full lg:w-1/2 space-y-6 md:pr-3'>

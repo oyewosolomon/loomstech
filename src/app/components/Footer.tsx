@@ -8,7 +8,7 @@ const Footer = () => {
 
     <div className='bg-white'>
       <div className='max-w-6xl mx-auto px-4 flex flex-col lg:flex-row justify-between gap-4 py-16'>
-          <div className='flex flex-col w-1/2 gap-3'>
+          <div className='flex flex-col w-full md:w-2/4 gap-3 mr-10'>
             <div className='font-recoleta text-[#02357A] font-semibold text-3xl'>
             Upgrade your business today with Loomstech
             </div>
