@@ -23,8 +23,8 @@ const Footer = () => {
           <div className=' w-1/2 lg:text-right'>
             <div className='flex flex-col align-middle gap-2'>
               <a href="/" className='text-[#0347A3]'>Home</a>
-              <a href="/#aboutus" className='hover-[#0347A3]'>About us</a>
-              <a href="/#contactus" className='hover-[#0347A3]'>Contact us</a>
+              <a href="/#aboutus" className='hover-[#0347A3] text-gray-700'>About us</a>
+              <a href="/#contactus" className='hover-[#0347A3] text-gray-700'>Contact us</a>
             </div>
             <ModalButton className="bg-[#046BF5] text-xs text-white px-3 py-2 rounded-xl flex lg:hidden lg:items-center lg:mx-auto md:mx-0">
                 Reach Out To Us
