@@ -38,7 +38,7 @@ const CloudHero = () => {
               <motion.p className="font-lota text-base md:text-lg lg:text-xl text-gray-800">
                 Partnering with you, we&apos;ll craft a streamlined cloud strategy that optimizes costs, enhances operational efficiency, and future-proofs your infrastructure. Our tailored approach will automate key processes, provide real-time insights, and create a flexible architecture that adapts to your evolving business needs.
               </motion.p>
-              <ModalButton className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md flex items-center mx-auto md:mx-0 transition-colors">
+              <ModalButton className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl flex items-center mx-auto md:mx-0 transition-colors">
                 Book a consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </ModalButton>

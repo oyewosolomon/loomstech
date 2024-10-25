@@ -88,7 +88,7 @@ const CloudProcess: FC<AWSLandingPageProps> = ({
           </p>
         </div>
         <div className='flex items-center mt-3 md:mt-0 justify-start md:justify-end'> 
-          <ModalButton className='bg-primary p-2 rounded-lg flex items-center text-white'>
+          <ModalButton className='bg-primary p-2 rounded-xl flex items-center text-white'>
             Book a consultation
             <ArrowRight className="ml-2 size-4" />
           </ModalButton>
