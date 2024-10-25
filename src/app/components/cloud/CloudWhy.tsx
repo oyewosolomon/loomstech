@@ -36,7 +36,7 @@ const CloudWhy = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className='flex flex-col gap-8 text-center mx-auto w-2/3'
+              className='flex flex-col gap-8 text-center mx-auto w-3/4 md:w-2/3'
             >
                 <h1 className='font-recoleta font-semibold text-3xl'> 
                     Reach incomparable cloud-based scalability that works for thousands of users
@@ -82,13 +82,13 @@ const CloudWhy = () => {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-50px" }}
                   variants={fadeInUp}
-                  className='w-full lg:w-1/2 h-64 sm:h-80 lg:h-[400px]'
+                  className='w-full lg:w-1/2 lg:h-[400px]'
                 >
-                    <div className='w-full h-full relative'>
+                    <div className='w-full h-full relative text-center md:text-left'>
                         <h2 className='font-recoleta font-semibold text-xl text-white my-4'>
                             Why build for the cloud?
                         </h2>
-                        <motion.div variants={fadeInUp} className='my-3'>
+                        <motion.div variants={fadeInUp} className='my-3 text-center md:text-left px-5 md:px-0'>
                             Your DevOps and other cloud developers can learn by experimenting with cloud environment if there&apos;s time and money. Or you can jump-start your cloud development in weeks (not months) with our team rich in cross-industry cloud development experience.
                         </motion.div>
 

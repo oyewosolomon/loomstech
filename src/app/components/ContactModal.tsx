@@ -103,7 +103,7 @@ const ContactModal = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-gray-800 border-gray-300 rounded-md"
                   required
                 />
               </div>
@@ -117,7 +117,7 @@ const ContactModal = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Enter your message"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-gray-800 border-gray-300 rounded-md"
                   rows={4}
                   required
                 />

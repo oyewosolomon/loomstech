@@ -71,7 +71,7 @@ const CloudProcess: FC<AWSLandingPageProps> = ({
     <div className={`min-h-screen bg-white ${customClass}`.trim()}>
       {/* Header Section */}
       <motion.div 
-        className='max-w-6xl mx-auto bg-[#BDD4E9] rounded-xl grid md:grid-cols-2 p-7 mb-12 bg-none md:bg-process-bg md:bg-right md:bg-no-repeat md:bg-fit'
+        className='max-w-6xl md:mx-auto mx-5 bg-[#BDD4E9] rounded-xl grid md:grid-cols-2 p-7 mb-12 bg-none md:bg-process-bg md:bg-right md:bg-no-repeat md:bg-fit'
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}

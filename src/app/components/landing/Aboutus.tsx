@@ -93,8 +93,8 @@ const Aboutus = () => {
   }, []);
 
   return (
-    <div id='aboutus' className='bg-white dark:bg-black dark:text-white min-h-screen py-16'>
-      <div className='max-w-6xl mx-auto px-8'>
+    <div id='aboutus' className='bg-white dark:text-white min-h-screen py-16'>
+      <div className='max-w-6xl mx-auto px-5'>
         <div className='mb-16'>
           <div className='text-black font-semibold mb-4'>WHAT WE DO</div>
           <h2 className='font-recoleta text-[#02357A] text-5xl font-semibold leading-snug mb-8 max-w-2xl'>
