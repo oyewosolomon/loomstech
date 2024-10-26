@@ -24,7 +24,7 @@ const CloudHero = () => {
   
     <div className="min-h-screen">
       <Nav />
-      <main className="container mx-auto min-h-[calc(100vh-4rem)]">
+      <main className="mx-auto min-h-[calc(100vh-4rem)]">
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 h-full py-12">
           <div className="w-full md:w-1/2 text-center md:text-left">
             <div className="space-y-6 px-12">
@@ -32,7 +32,7 @@ const CloudHero = () => {
               initial={{opacity:0, y:-100}}
               animate={{opacity:1, y:0}}
               transition={{duration:0.8, ease:"easeInOut", delay:0.2}}
-               className="font-recoleta text-3xl md:text-5xl lg:text-6xl font-semibold text-blue-900">
+               className="font-recoleta text-3xl md:text-5xl lg:text-6xl font-semibold text-secondary">
                 Lead your cloud development like the best in business do
               </motion.h1>
               <motion.p className="font-lota text-base md:text-lg lg:text-xl text-gray-800">

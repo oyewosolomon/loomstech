@@ -191,7 +191,7 @@ const Aboutus = () => {
   );
   
   return (
-    <div id='aboutus' className='bg-white dark:text-white min-h-screen py-16 overflow-x-hidden'>
+    <div id='aboutus' className='bg-white min-h-screen py-16 overflow-x-hidden'>
       <div className='max-w-6xl mx-auto px-0 md:px-5'>
         <div className='mb-8 text-center md:text-left'>
           <div className='text-black font-semibold mb-4'> WHAT WE DO </div>

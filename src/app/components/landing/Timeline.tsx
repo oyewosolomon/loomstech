@@ -93,7 +93,8 @@ const Timeline: React.FC = () => {
     };
 
     return (
-      <div ref={ref} className={`overflow-x-hidden mb-16 md:flex md:items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+      
+      <div ref={ref} className={` overflow-x-hidden mb-16 md:flex md:items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
         <motion.div 
           className={`overflow-x-hidden w-full md:w-1/2 ${isEven ? 'md:pr-16' : 'md:pl-12'} mb-4 md:mb-0`}
           variants={imageVariants}
@@ -134,7 +135,7 @@ const Timeline: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 bg-white">
+    <div className="mx-auto py-8 bg-white">
       <div className='font-lota font-semibold text-center text-sm mb-3 text-[#193E2F]'>
         HOW WE WORK
       </div>              

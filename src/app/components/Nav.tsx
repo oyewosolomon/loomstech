@@ -19,9 +19,10 @@ const Nav = () => {
         
             <nav className='hidden md:block'>
                 <ul className="flex space-x-10">
-                <li><a href="/" className="text-[#0347A3] font-semibold">Home</a></li>
-                <li><a href="/#aboutus" className="text-gray-600 hover:text-[#0347A3]">About us</a></li>
-                <li><a href="/#contactus" className="text-gray-600 hover:text-[#0347A3]">Contact us</a></li>
+                <li><Link href="/" className="text-[#0347A3] font-semibold">Home</Link></li>
+                <li><Link href="/#aboutus" className="text-gray-600 hover:text-[#0347A3]">About us</Link></li>
+                <li><Link href="/cloud" className="text-gray-600 hover:text-[#0347A3]">Cloud services</Link></li>
+                <li><Link href="/#contactus" className="text-gray-600 hover:text-[#0347A3]">Contact us</Link></li>
                 </ul>
             </nav>
         

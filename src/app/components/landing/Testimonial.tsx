@@ -65,7 +65,7 @@ const Testimonial = () => {
               <div>
                 <Image src="/assets/Stars.png" width={100} height={20} alt='Testimonials' />
               </div>
-              <div className='text-2xl sm:text-3xl mb-8 lg:text-4xl transition-opacity duration-500 pr-0 md:pr-14'>
+              <div className='font-recoleta text-2xl sm:text-3xl mb-8 lg:text-4xl transition-opacity duration-500 pr-0 md:pr-14'>
                 {testimonials[currentIndex].text}
               </div>
             </div>
