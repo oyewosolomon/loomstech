@@ -77,7 +77,7 @@ const ContactModal = () => {
           <div className="mx-auto flex flex-col gap-4">
             <div className="flex justify-between items-center mb-4">
               <div></div>
-              <h2 className="text-3xl font-recoleta font-bold text-center text-blue-900">
+              <h2 className="text-3xl font-sora font-bold text-center text-blue-900">
                 Connect with us
               </h2>
               <button

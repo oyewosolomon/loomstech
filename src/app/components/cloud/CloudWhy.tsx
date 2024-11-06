@@ -145,12 +145,12 @@ const CloudWhy: React.FC = () => {
       className='w-full mt-4 mb-8 lg:hidden'
     >
       <div className='text-center'>
-        <h2 className='font-recoleta font-semibold text-xl text-white mb-3'>
+        <h2 className='font-sora font-semibold text-xl text-white mb-3'>
           {buttonContent[buttonType].title}
         </h2>
         <p className='mb-4'>{buttonContent[buttonType].description}</p>
         <div className='flex flex-col gap-3 p-6 text-left text-base text-black rounded-lg bg-[#BDD4E9]'>
-          <h3 className='text-xl font-recoleta text-center md:text-left text-secondary'>
+          <h3 className='text-xl font-sora text-center md:text-left text-secondary'>
             Key benefits
           </h3>
           {buttonContent[buttonType].benefits.map((benefit, index) => (
@@ -174,7 +174,7 @@ const CloudWhy: React.FC = () => {
               variants={fadeInUp}
               className='flex flex-col gap-8 text-center mx-auto w-full md:w-2/3'
             >
-                <h1 className='font-recoleta font-semibold text-3xl'> 
+                <h1 className='font-sora font-semibold text-3xl'> 
                     Reach incomparable cloud-based scalability that works for thousands of users
                 </h1> 
                 
@@ -189,7 +189,7 @@ const CloudWhy: React.FC = () => {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-50px" }}
                   variants={staggerChildren}
-                  className='w-full lg:w-1/2 font-recoleta font-medium space-y-6 md:pr-36'
+                  className='w-full lg:w-1/2 font-sora font-medium space-y-6 md:pr-36'
                 >
                   {/* Button and content section for overspend */}
                   <div>
@@ -266,7 +266,7 @@ const CloudWhy: React.FC = () => {
                   className='hidden lg:block lg:w-1/2 lg:h-[400px]'
                 >
                     <div className='w-full h-full relative text-center md:text-left'>
-                        <h2 className='font-recoleta font-semibold  text-center md:text-left text-xl text-white my-4'>
+                        <h2 className='font-sora font-semibold  text-center md:text-left text-xl text-white my-4'>
                             {buttonContent[activeButton].title}
                         </h2>
                         <motion.div 
@@ -283,7 +283,7 @@ const CloudWhy: React.FC = () => {
                           variants={fadeInUp}
                           className='flex flex-col gap-3 p-6 text-left text-base text-black rounded-lg bg-[#BDD4E9]'
                         >
-                            <h2 className='text-xl font-recoleta text-center md:text-left text-secondary'>
+                            <h2 className='text-xl font-sora text-center md:text-left text-secondary'>
                                 Key benefits
                             </h2>
                             

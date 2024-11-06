@@ -1,123 +1,116 @@
 "use client"
 
-
-import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { SectionProps } from "@/app/types";
 
-const Testimonial = () => {
+const Testimonial = ({id}:SectionProps) => {
   const testimonials = [
     {
-      text: "They are more than just a software company. They are the partner who will help you achieve what you want to achieve.",
-      author: "Jordan Ajibola",
-      role: "CEO, Ship bubble",
-      avatar: "/assets/Avatar.png",
-      image: "/assets/Contents.png"
+      name: "Emily Richards",
+      title: "Land Buyer",
+      feedback: "JOED Properties made purchasing my land an absolute breeze. Their team guided me through every step, providing detailed information and great support. I couldn’t be happier with my new property!",
+      image: "https://readymadeui.com/profile_2.webp",
     },
     {
-      text: "Their expertise and dedication have transformed our business operations completely. Highly recommended!",
-      author: "Sarah Chen",
-      role: "CTO, TechFlow",
-      avatar: "/assets/Avatar.png",
-      image: "/assets/Contents.png"
+      name: "Michael O’Neal",
+      title: "Apartment Owner",
+      feedback: "I recently bought an apartment through JOED Properties, and the experience was excellent. They found me the perfect place, and the entire process was seamless and stress-free. Highly recommended!",
+      image: "https://readymadeui.com/profile_3.webp",
     },
     {
-      text: "Outstanding service and innovative solutions. They've exceeded our expectations in every way.",
-      author: "Michael Rodriguez",
-      role: "Founder, InnovateLab",
-      avatar: "/assets/Avatar.png",
-      image: "/assets/Contents.png"
-    }
+      name: "Sarah Thompson",
+      title: "Homeowner",
+      feedback: "Purchasing my first home with JOED Properties was a dream come true. Their team handled everything professionally, ensuring I got the best deal. I love my new home, and JOED Properties made it all possible!",
+      image: "https://readymadeui.com/profile_4.webp",
+    },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
+  const intervalRef = useRef(null);
 
-  
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000); 
+    const startScrolling = () => {
+      intervalRef.current = setInterval(() => {
+        setScrollPosition((prevPosition) => {
+          const newPosition = prevPosition + 1; // Scroll speed
+          const containerWidth = testimonials.length * 400;
+          return newPosition >= containerWidth ? 0 : newPosition;
+        });
+      }, 50);
+    };
 
-    return () => clearInterval(timer);
-  }, [testimonials.length]);
+    if (!isPaused) {
+      startScrolling();
+    }
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPaused, testimonials.length]);
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+  const handleMouseLeave = () => {
+    setIsPaused(false);
   };
 
   return (
-    <div id='testimonial' className='bg-[#046BF5] text-white py-12 overflow-x-hidden'>
-      <div className='max-w-6xl mx-auto px-4 overflow-x-hidden'>
-        <div className='flex flex-col lg:flex-row gap-12'>
-          <div className='w-full lg:w-1/2 flex flex-col justify-between space-y-6 md:pr-3 h-full'>
-            {/* Top content */}
-            <div className='space-y-6'>
-              <div>
-                <Image src="/assets/Stars.png" width={100} height={20} alt='Testimonials' />
-              </div>
-              <div className='font-recoleta text-2xl sm:text-3xl mb-8 lg:text-4xl transition-opacity duration-500 pr-0 md:pr-14'>
-                {testimonials[currentIndex].text}
-              </div>
-            </div>
-
-            {/* Bottom content - will be pushed to bottom */}
-            <div className='flex flex-col sm:flex-row justify-between md:items-center gap-4 mt-auto'>
-              {/* Rest of your content remains the same */}
-              <div className='flex items-center gap-4'>
-                <Image 
-                  src={testimonials[currentIndex].avatar} 
-                  width={56} 
-                  height={56} 
-                  alt='Avatar' 
-                  className='rounded-full'
-                />
-                <div>
-                  <div className='font-semibold'>{testimonials[currentIndex].author}</div>
-                  <div className='text-sm'>{testimonials[currentIndex].role}</div>
+    <section id={id} className="py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="flex align-middle place-items-center px-5 text-center text-3xl font-bold text-gray-800 mb-12 font-sora">
+          What our clients say about 
+         <Image src="/assets/logo.png" width={130} height={30} alt="Logo" />
+        </h2>
+        <div className="relative py-10 mt-32 mb-20">
+          {/* Gradient background */}
+          <div className="bg-gradient-to-tr from-[#EF4724] via-[#EE8329] to-[#EF4724] max-w-[95%] md:max-w-[65%] h-[145%] w-full absolute -top-16 left-0 right-0 mx-auto rounded-3xl max-md:hidden" />
+          
+          {/* Scrolling container */}
+          <div 
+            className="relative z-10 overflow-hidden"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div 
+              className={`flex gap-6 ${!isPaused ? 'transition-transform duration-100' : ''}`}
+              style={{
+                transform: `translateX(-${scrollPosition}px)`,
+                width: 'fit-content'
+              }}
+            >
+              {duplicatedTestimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 w-96 bg-gradient-to-r from-blue-100 via-white to-blue-100 px-6 py-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow "
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={50}
+                      height={50}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{testimonial.name}</h3>
+                      <p className="text-md text-gray-600">{testimonial.title}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-md">{testimonial.feedback}</p>
                 </div>
-              </div>
-              <div className='flex gap-3 mt-4 sm:mt-0'>
-                <button 
-                  onClick={handlePrevious}
-                  className='rounded-full bg-white text-black p-2 hover:bg-gray-200 transition-colors'
-                  aria-label="Previous testimonial"
-                >
-                  <ArrowLeft size={24} />
-                </button>
-                <button 
-                  onClick={handleNext}
-                  className='rounded-full bg-white text-black p-2 hover:bg-gray-200 transition-colors'
-                  aria-label="Next testimonial"
-                >
-                  <ArrowRight size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className='hidden lg:block lg:w-1/2 h-64 sm:h-80 lg:h-[400px]'>
-            <div className='w-full h-full relative'>
-              <Image 
-                src={testimonials[currentIndex].image}
-                layout="fill"
-                objectFit="cover"
-                alt="Testimonials"
-                className='rounded-lg transition-opacity duration-500'
-              />
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

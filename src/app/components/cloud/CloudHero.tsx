@@ -32,7 +32,7 @@ const CloudHero = () => {
               initial={{opacity:0, y:-100}}
               animate={{opacity:1, y:0}}
               transition={{duration:0.8, ease:"easeInOut", delay:0.2}}
-               className="font-recoleta text-3xl md:text-5xl lg:text-6xl font-semibold text-secondary">
+               className="font-sora text-3xl md:text-5xl lg:text-6xl font-semibold text-secondary">
                 Lead your cloud development like the best in business do
               </motion.h1>
               <motion.p className="font-lota text-base md:text-lg lg:text-xl text-gray-800">

@@ -127,7 +127,7 @@ const Timeline: React.FC = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <h2 className="font-recoleta text-secondary text-2xl font-semibold mb-2">{step.title}</h2>
+          <h2 className="font-sora text-secondary text-2xl font-semibold mb-2">{step.title}</h2>
           <p className="text-gray-600">{step.description}</p>
         </motion.div>
       </div>
@@ -140,7 +140,7 @@ const Timeline: React.FC = () => {
         HOW WE WORK
       </div>              
              
-      <h1 className="font-recoleta text-5xl font-semibold text-center text-secondary mb-14">Our process</h1>
+      <h1 className="font-sora text-5xl font-semibold text-center text-secondary mb-14">Our process</h1>
     
       <div className='max-w-6xl mx-auto px-4 md:px-8'>
         <div className="relative">

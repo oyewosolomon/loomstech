@@ -1,12 +1,31 @@
 "use client"
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Nav from '../Nav';
 import ModalButton from '../ModalButton';
 
-const Hero = () => {
+type HeroProps = {
+  id?: string;
+};
+const Hero = ({ id }: HeroProps)  => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    '/assets/12.png',
+    '/assets/13.png',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const contentVariants = {
     hidden: {
@@ -23,36 +42,33 @@ const Hero = () => {
     }
   };
 
-  const svgContainerVariants = {
-    hidden: {
+  const imageVariants = {
+    enter: {
       opacity: 0,
-      scale: 0.95
+      scale: 1.05,
+      transition: {
+        duration: 0.5
+      }
     },
-    visible: {
+    center: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 1,
-        ease: "easeOut"
+        duration: 0.5
       }
-    }
-  };
-
-  const pathVariants = {
-    hidden: {
-      opacity: 0
     },
-    visible: {
-      opacity: 1,
+    exit: {
+      opacity: 0,
+      scale: 0.95,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut"
+        duration: 0.5
       }
     }
   };
 
-  return (    
-    <div className="bg-[#BDD4E9] min-h-screen">
+  return ( 
+    <section id="hero">   
+    <div className="bg-[#F3E9E5] min-h-screen">
       <Nav />
       <main className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -64,18 +80,18 @@ const Hero = () => {
           >
             <div className="mx-5">
               <motion.h1 
-                className="text-3xl md:text-5xl lg:text-6xl lg:-mt-24 font-semibold text-[#02357A] mb-4 font-recoleta"
+                className="text-3xl md:text-5xl lg:text-6xl lg:-mt-24 font-semibold text-black mb-4 font-sora"
                 variants={contentVariants}
               >
-                Your Strategic Partner for Scalable Solutions
+                Reaching Your Comfort Through Our Property Solutions
               </motion.h1>
               <motion.p 
-                className="text-md md:text-lg lg:text-2xl text-[#262A2F] mb-6 font-lota"
+                className="text-md md:text-lg lg:text-2xl text-[#262A2F] mb-6 font-satoshi"
                 variants={contentVariants}
               >
-                At loomstech, we go beyond conventional consulting. We are your 
-                trusted partner in designing and crafting powerful software 
-                solutions for seamless business growth.
+                Experience exceptional real estate services with Jo'ed Properties. 
+                From land sales to property management, we deliver affordable, 
+                reliable, and timely solutions for all your property needs.
               </motion.p>
               
               <motion.div
@@ -83,7 +99,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <ModalButton className="bg-[#046BF5] text-white px-6 py-3 rounded-xl flex items-center mx-auto md:mx-0">
+                <ModalButton className="bg-[#EF4724] hover:bg-[#EE8329] text-white px-6 py-3 rounded-xl flex items-center mx-auto md:mx-0">
                   Connect with us
                   <ArrowRight className="ml-2" />
                 </ModalButton>
@@ -91,35 +107,38 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          <motion.div 
-            className="w-full md:w-1/2 h-[450px] md:h-screen relative -bottom-4 md:bottom-0"
-            initial="hidden"
-            animate="visible"
-            variants={svgContainerVariants}
-          >
-            <div 
-              className="w-full h-full bg-no-repeat bg-contain bg-center"
-              style={{ backgroundImage: 'url(/assets/g8.svg)' }}
-            />
-            
-            <motion.div
-              className="absolute inset-0 z-10"
-              initial="hidden"
-              animate="visible"
-              variants={pathVariants}
-            >
-              <div 
-                className="w-full h-full bg-no-repeat bg-contain bg-center"
-                style={{ 
-                  backgroundImage: 'url(/assets/g8.svg)',
-                  mixBlendMode: 'overlay'
-                }}
-              />
-            </motion.div>
-          </motion.div>
+          <div className="w-full md:w-1/2 h-[450px] md:h-screen relative md:bottom-0 overflow-hidden">
+            <AnimatePresence initial={false} mode="sync">
+              <motion.div
+                key={currentImageIndex}
+                variants={imageVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="absolute inset-0 w-full h-full"
+              >
+                <motion.div 
+                  className="w-full h-full bg-no-repeat bg-contain bg-center"
+                  style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+                  layoutId="hero-image"
+                />
+                
+                {/* Overlay effect */}
+                <motion.div
+                  className="absolute inset-0 z-10 w-full h-full bg-no-repeat bg-contain bg-center"
+                  style={{ 
+                    backgroundImage: `url(${images[currentImageIndex]})`,
+                    mixBlendMode: 'overlay'
+                  }}
+                  layoutId="hero-overlay"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </main>
     </div>
+    </section>
   );
 };
 

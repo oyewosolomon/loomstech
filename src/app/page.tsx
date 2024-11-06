@@ -4,17 +4,20 @@ import Timeline from "./components/landing/Timeline";
 import Testimonial from "./components/landing/Testimonial";
 import Contactus from "./components/landing/Contactus";
 import Footer from "./components/Footer";
+import Commerce from "./components/Commerce";
+import Services from "./components/services/Services";
 
 export default function Home() {
   
   return (
     <div>
-      <Hero/>
-      <Aboutus/>
-      <Timeline/>
-      <Testimonial/>
-      <Contactus/>
-      <Footer/>
+      <Hero id="hero" />
+      <Services id="services" />
+      <Aboutus id="aboutus" />
+      <Commerce id="commerce" />
+      <Testimonial id="testimonial" />
+      <Contactus id="contactus" />
+      <Footer />
     </div>
   );
 }

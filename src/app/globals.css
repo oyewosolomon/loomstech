@@ -49,16 +49,45 @@
        font-style: normal;
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi/Satoshi-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Utility class for using Satoshi font */
+.font-satoshi {
+  font-family: 'Satoshi', sans-serif;
+}
+
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   padding: 0;
   margin: 0;
   color: var(--foreground);
   background: #BDD4E9;
-  font-family: 'Lota Grotesque', Helvetica, sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
 
 @layer utilities {
@@ -70,4 +99,14 @@ body {
   stroke: #ffffff;
   stroke-width: 3px;
   fill-opacity: 0;
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

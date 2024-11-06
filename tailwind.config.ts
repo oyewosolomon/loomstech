@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         recoleta: ['Recoleta', 'sans-serif'],
         lota: ['Lota Grotesque', 'sans-serif'],
+        sora: ['var(--font-sora)'],
       },
       colors: {
         background: "var(--background)",

@@ -79,7 +79,7 @@ const CloudProcess: FC<AWSLandingPageProps> = ({
       >
         <div className='w-full md:w-[74%]'>
           <p className='mb-3'>
-            <span className='font-recoleta font-semibold text-xl text-secondary'>What&apos;s your no. 1 issue with AWS?</span> 
+            <span className='font-sora font-semibold text-xl text-secondary'>What&apos;s your no. 1 issue with AWS?</span> 
             <span className='text-primary'>Cost?</span>
           </p>
           <p className='text-primary mb-2'>Predictability? Delivery time?</p>
@@ -110,7 +110,7 @@ const CloudProcess: FC<AWSLandingPageProps> = ({
               <span className="text-2xl text-[#BDD4E9] font-bold">{point.id}</span>
             </div>
             <div className="flex-col md:flex lg:flex-row">
-              <h2 className="text-xl font-recoleta w-full md:w-1/2 font-bold text-secondary mb-4">
+              <h2 className="text-xl font-sora w-full md:w-1/2 font-bold text-secondary mb-4">
                 {point.title}
               </h2>
               <p className="w-full md:w-1/2 text-gray-700 leading-relaxed">
